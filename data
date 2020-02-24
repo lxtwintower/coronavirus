@@ -1,0 +1,11 @@
+echo "# coronavirus" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/lxtwintower/coronavirus.git
+git push -u origin master
+library (readr)
+
+urlfile="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
+
+mydata<-read_csv(url(urlfile))
